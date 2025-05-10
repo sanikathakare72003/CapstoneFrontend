@@ -1,0 +1,6 @@
+{
+    "rewrites": [
+      { "source": "/api/predict", "destination": "http://52.87.163.213:8000/predict" }
+    ]
+  }
+  

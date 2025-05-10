@@ -32,7 +32,7 @@ export default function Home() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await fetch("http://52.87.163.213:8000/predict", {
+      const res = await fetch("/api/predict", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, age: parseInt(formData.age.toString()), age_years: parseInt(formData.age_years.toString()), height: parseFloat(formData.height.toString()), weight: parseFloat(formData.weight.toString()), ap_hi: parseInt(formData.ap_hi.toString()), ap_lo: parseInt(formData.ap_lo.toString()), cholesterol: parseInt(formData.cholesterol.toString()), gluc: parseInt(formData.gluc.toString()), smoke: parseInt(formData.smoke.toString()), alco: parseInt(formData.alco.toString()), active: parseInt(formData.active.toString()), gender: parseInt(formData.gender.toString()), cardio: parseInt(formData.cardio.toString()) }),

@@ -73,7 +73,9 @@ export default function Home() {
         </form>
         {prediction !== null && (
           <div className="mt-4 p-4 bg-gray-50 rounded-lg text-center">
-            <p className="text-lg font-semibold">Prediction: {prediction}</p>
+            <p className="text-lg font-semibold">
+              Prediction: {Number(prediction) === 1 ? "Cardiovascular Disease" : "Normal"}
+            </p>          
           </div>
         )}
       </div>
